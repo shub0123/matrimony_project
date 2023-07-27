@@ -45,7 +45,7 @@ class UserController extends Controller
             'c_password' => 'required|same:password',
             'email' => 'required|email|unique:users',
             'contact_number' => 'required',
-            'religion_id' => 'required',
+            'religion' => 'required',
         ]);
         if ($validator->fails()) {
             return Redirect::back()->withErrors($validator->errors());
